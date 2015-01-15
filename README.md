@@ -1,3 +1,10 @@
 # Small data structure untilities
 
 C implementation of few basic (generic) data structure operations
+
+### Build
+```bash
+mkdir -p out
+cd out
+cmake ../ && make
+```

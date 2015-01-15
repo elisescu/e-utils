@@ -7,13 +7,21 @@ enum {
     L_NOT_FOUND
 };
 
-typedef struct list_s {
+struct list_el {
+    struct list_el *next;
     void *data;
-    struct list_s *next;
+};
+
+typedef struct list_s {
+    struct list_el *first;
+    int no_elements;
 } list_t ;
 
 list_t* list_create();
-int list_insert(list_t *list, void *data);
-int list_delete(list_t *list, void *data);
+int list_append(list_t *list, void *data);
+int list_prepend(list_t *list, void *data);
+int list_remove(list_t *list, void *data);
+int list_destroy(list_t *list);
+int get_no_elements(list_t *list);
 
 #endif

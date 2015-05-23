@@ -1,4 +1,4 @@
-# Small data structure untilities
+# Small data structure utilities
 
 C implementation of few basic (generic) data structure operations
 
